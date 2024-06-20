@@ -1,0 +1,13 @@
+.navbar {
+  justify-content: center;
+  display: flex;
+  /* justify-items: center; */
+  padding: 10px;
+  background: #1d2230;
+  gap: 16px;
+}
+.purchaseSeller {
+  display: flex;
+  justify-items: center;
+  gap: 8px;
+}
