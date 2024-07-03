@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import ProductList from "./components/productList/productList";
+import Navbar from "./components/navbar/Navbar";
+import Shop from "./Pages/Shop";
+import Purchases from "./components/purchases/Purchases";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<ProductList />} />
+          <Route path="/" element={<Purchases />} />
         </Routes>
       </BrowserRouter>
     </>

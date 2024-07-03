@@ -14,7 +14,7 @@ import Badge from "@mui/material/Badge";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
 import { Container } from "@mui/material";
-import MainButton from "../Button/mainButton";
+import MainButton from "../Button/MainButton";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 
@@ -54,7 +54,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Navbar() {
   return (
-    <Box>
+    <Box sx={{ marginBottom: "50px" }}>
       <AppBar position="static">
         <Toolbar className="navbar">
           <IconButton

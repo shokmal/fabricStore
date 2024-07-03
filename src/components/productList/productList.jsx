@@ -1,5 +1,5 @@
-import React from "react";
-import "./productList.css";
+import * as React from "react";
+import "./ProductList.css";
 import { CardContent, CardMedia, Container, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";

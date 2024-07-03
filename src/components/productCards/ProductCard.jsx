@@ -6,7 +6,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { Button, Typography } from "@mui/material";
-import MainButton from "../Button/mainButton";
+import MainButton from "../Button/MainButton";
 import "./Card.css";
 
 export default function ProductCard({ image, tytle, price }) {
@@ -20,7 +20,6 @@ export default function ProductCard({ image, tytle, price }) {
             height="250"
             image={image}
           />
-
           <CardContent className="productCardContent">
             <Typography>{tytle}</Typography>
             <Typography variant="h5">{price}</Typography>
