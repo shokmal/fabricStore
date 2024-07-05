@@ -11,10 +11,10 @@ const theme = createTheme({
   },
 });
 
-export default function MainButton({ tytle }) {
+export default function MainButton({ tytle, onClick }) {
   return (
     <ThemeProvider theme={theme}>
-      <Button variant="contained" color="primary">
+      <Button onClick={onClick} variant="contained" color="primary">
         {tytle}
       </Button>
     </ThemeProvider>

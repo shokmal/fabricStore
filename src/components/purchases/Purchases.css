@@ -1,7 +1,23 @@
-.purchasse {
-  padding: 20px 0 20px 0;
+.tablePurchasse {
+  padding: 20px 40px 20px 40px;
+  margin-top: 20px;
+  table-layout: auto;
+  max-width: 800px;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  border: none;
+
+  /* border-collapse: collapse;
+  border: 0px;
+  width: 100%; */
+}
+.tablePurchasse2 {
+  border: none;
 }
 
-.tablePurchasse {
-  padding: 0 40px 0 40px;
-}
+/* .purchasse {
+  display: flex;
+  width: 60px;
+  
+} */

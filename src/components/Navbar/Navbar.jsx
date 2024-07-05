@@ -17,6 +17,7 @@ import { Container } from "@mui/material";
 import MainButton from "../Button/MainButton";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
+import { useNavigate } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -53,6 +54,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Navbar() {
+  const navigate = useNavigate();
+  const handlePurchases = async () => {
+    navigate("/purchases");
+  };
+
   return (
     <Box sx={{ marginBottom: "50px" }}>
       <AppBar position="static">
@@ -79,7 +85,7 @@ export default function Navbar() {
             />
           </Search>
           <Box className="purchaseSeller">
-            <MainButton tytle={"Мои покупки"} />
+            <MainButton onClick={handlePurchases} tytle={"Мои покупки"} />
             <MainButton tytle={"Начать продавать"} />
           </Box>
         </Toolbar>
