@@ -1,5 +1,6 @@
 import { Collapse, Typography } from "@mui/material";
 import * as React from "react";
+import { useState } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -9,19 +10,11 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
+import { Data } from "../Data";
 import "./Purchases.css";
 
 export default function Purchases() {
-  const purchase = [
-    {
-      name: "prime steam",
-      price: 500,
-    },
-    {
-      name: "skin",
-      price: 100,
-    },
-  ];
+  const [item, setItems] = useState(Data);
   return (
     <Container className="purchasse" sx={{ width: "40%" }}>
       <Typography
@@ -45,12 +38,13 @@ export default function Purchases() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {purchase.map((row) => (
-                <TableRow key={row.name} sx={{ "td, th": { border: 0 } }}>
+              {item.map((item) => (
+                <TableRow key={item.name} sx={{ "td, th": { border: 0 } }}>
                   <TableCell component="th" scope="row">
-                    тест
+                    {item.tytle}
                   </TableCell>
-                  <TableCell align="right">тест</TableCell>
+                  <TableCell align="right">{item.price}</TableCell>
+                  <TableCell align="right">{item.id}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

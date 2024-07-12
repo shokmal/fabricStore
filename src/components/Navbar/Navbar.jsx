@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import "./Navbar.css";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -58,6 +58,9 @@ export default function Navbar() {
   const handlePurchases = async () => {
     navigate("/purchases");
   };
+  const handleCategory = async () => {
+    navigate("/category");
+  };
 
   return (
     <Box sx={{ marginBottom: "50px" }}>
@@ -70,11 +73,11 @@ export default function Navbar() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <Link underline="none" color="black">
-              Market place
+            <Link href="/" underline="none" color="black">
+              Market
             </Link>
           </IconButton>
-          <MainButton tytle={"Каталог"} />
+          <MainButton onClick={handleCategory} tytle={"Каталог"} />
           <Search>
             <SearchIconWrapper>
               <SearchIcon />

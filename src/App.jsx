@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import Shop from "./Pages/Shop";
-import Purchases from "./components/purchases/Purchases";
+import ShopPages from "./Pages/ShopPage";
+import PurchasesPage from "./Pages/PurchasesPage";
+import Category from "./components/category/Category";
 
 function App() {
   return (
@@ -9,8 +10,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Shop />} />
-          <Route path="/purchases" element={<Purchases />} />
+          <Route path="/" element={<ShopPages />} />
+          <Route path="/purchases" element={<PurchasesPage />} />
+          <Route path="/category" element={<Category />} />
         </Routes>
       </BrowserRouter>
     </>

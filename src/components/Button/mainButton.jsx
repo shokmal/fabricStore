@@ -7,6 +7,7 @@ const theme = createTheme({
     primary: {
       main: "#5dc416",
       contrastText: "#fff",
+      disableElevation: true,
     },
   },
 });
@@ -14,7 +15,12 @@ const theme = createTheme({
 export default function MainButton({ tytle, onClick }) {
   return (
     <ThemeProvider theme={theme}>
-      <Button onClick={onClick} variant="contained" color="primary">
+      <Button
+        onClick={onClick}
+        variant="contained"
+        color="primary"
+        disableElevation={true}
+      >
         {tytle}
       </Button>
     </ThemeProvider>
